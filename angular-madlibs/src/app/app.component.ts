@@ -14,10 +14,15 @@ export class AppComponent {
   animal: string;
   noun: string;
   celebrity: string;
+  display: boolean = false;
 
   save() {
-    console.log(this.holiday && this.place 
-      && this.animal && this.noun && this.celebrity);
+    if(this.holiday && this.place
+      && this.animal && this.noun && this.celebrity) {
+        this.display = true; 
+      } else {
+        alert("Fill out the form completely before continuing")
+      }
   }
   reset() {
     this.holiday = '';
@@ -25,6 +30,7 @@ export class AppComponent {
     this.animal = '';
     this.noun = '';
     this.celebrity = '';
+    this.display = false;
   }
 
 }

@@ -1,0 +1,14 @@
+.mad-form{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+.paragraph{
+    border: solid;
+    border-radius: 5px;
+    border-color: rgb(21, 105, 179);
+}
+.save-btn{
+    margin: 10px;
+}

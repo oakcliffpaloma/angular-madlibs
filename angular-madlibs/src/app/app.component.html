@@ -1,6 +1,10 @@
-<h2>Enter Your Words Below:</h2>
+<div class="container">
+<div class="p-3 mb-2 bg-primary text-white">
+  <h2>Enter Your Words Below:</h2>
+</div>
 
-<div>
+
+<div class="mad-form">
   Random Holiday:<br>
   <input type="text" [(ngModel)]="holiday"/>
   <br><br>
@@ -16,16 +20,24 @@
   Any Celebrity:<br>
   <input type="text" [(ngModel)]="celebrity"/>
   <br><br>
-  <button class="btn btn-danger" (click)="save()">Save</button>
-  <button (click)="reset()">Reset</button>
-</div> 
 
-<div class="paragraph">
-  <h1 class="header">See Your Madlib Below:</h1>
-  <p>You're Invited to Our Weekly {{holiday}} Party!</p>
-  <p> Your presence is requested at {{place}} at noon.</p>
-  <p>Please come prepared with your favorite stuffed {{animal}}.</p>
-  <p>We will be creating {{noun}} for your {{animal}} to wear. How exciting!</p>
-  <p>Please be on time, not like that one person at the last party, looking at you {{celebrity}}!</p>
+    <div class="row">
+      <div class="col">
+        <button class="btn btn-outline-primary save-btn" (click)="save()">Save</button>
+        <button class="btn btn-outline-warning reset-btn" (click)="reset()">Reset</button>
+      </div>
+  </div>
 
+
+<div class="p-3 mb-2 bg-primary text-white">
+    <h2>See Your Invite Below:</h2>
+  </div>
+<div *ngIf="display" class="paragraph">
+  <p>You're Invited to Our Weekly <span style="color: blueviolet"> {{holiday}}</span> Party!</p>
+  <p> Your presence is requested at <span style="color: blueviolet"> {{place}}</span> at noon.</p>
+  <p>Please come prepared with your favorite stuffed <span style="color: blueviolet"> {{animal}}</span>.</p>
+  <p>We will be creating <span style="color: blueviolet"> {{noun}}</span> for your <span style="color: blueviolet"> {{animal}}</span> to wear. How exciting!</p>
+  <p>Please be on time, not like that one person at the last party, looking at you <span style="color: blueviolet"> {{celebrity}}</span>!</p>
+
+</div>
 </div>
